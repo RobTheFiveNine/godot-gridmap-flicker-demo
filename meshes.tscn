@@ -1,0 +1,51 @@
+[gd_scene load_steps=9 format=3 uid="uid://cokvvwlo3pwnu"]
+
+[ext_resource type="ArrayMesh" uid="uid://bf7x8yaoxfmp" path="res://meshes/block.res" id="1_v7ls3"]
+[ext_resource type="ArrayMesh" uid="uid://bhq8yxcrb13o2" path="res://meshes/block_c.res" id="2_4quuo"]
+[ext_resource type="ArrayMesh" uid="uid://d200gpqpwvtbf" path="res://meshes/block_s.res" id="3_ekb14"]
+[ext_resource type="ArrayMesh" uid="uid://cu14uyuc7blmj" path="res://meshes/block_sw.res" id="5_1i4f4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ql6r5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7mrf3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tkaw5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jtmiw"]
+
+[node name="meshes" type="Node3D"]
+
+[node name="Block" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_v7ls3")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Block"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Block/StaticBody3D"]
+shape = SubResource("BoxShape3D_ql6r5")
+
+[node name="Block_C" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+mesh = ExtResource("2_4quuo")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Block_C"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Block_C/StaticBody3D"]
+shape = SubResource("BoxShape3D_7mrf3")
+
+[node name="Block_S" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+mesh = ExtResource("3_ekb14")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Block_S"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Block_S/StaticBody3D"]
+shape = SubResource("BoxShape3D_tkaw5")
+
+[node name="Block_SW" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+mesh = ExtResource("5_1i4f4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Block_SW"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Block_SW/StaticBody3D"]
+shape = SubResource("BoxShape3D_jtmiw")

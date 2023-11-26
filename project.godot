@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="gridmap-edge-flicker"
-run/main_scene="res://main_scene.tscn"
+run/main_scene="res://overlapping_faces.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
 
 [input]
 
